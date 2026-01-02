@@ -17,7 +17,7 @@ category_choice = [
 class Topic(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    start_date = models.DateField(auto_now_add=True)
+    start_date = models.DateField()
     category = models.CharField(max_length=100, choices=category_choice, default="other")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
